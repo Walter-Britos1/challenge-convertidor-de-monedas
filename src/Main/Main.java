@@ -12,7 +12,7 @@ public class Main {
         do {
             // Mostrar el menu principal
             System.out.println("### Menú Principal ###");
-            System.out.println("1. Ver tasas de cambio");
+            System.out.println("1. Convertir moneda");
             System.out.println("0. Salir");
             System.out.print("Selecciona una opción: ");
 
