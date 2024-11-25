@@ -3,7 +3,7 @@ package Models;
 import java.time.LocalDateTime;
 
 public class ConversionRecord {
-    private String baseCurrency; // Moneda base
+    private String base; // Moneda base
     private String targetCurrency; // Moneda de destino
     private double convertedAmount; // Cantidad convertida
     private double conversionResult; // Resultado de la conversión
@@ -11,13 +11,13 @@ public class ConversionRecord {
 
     // Contructor para la clase ConversionRecord
     public ConversionRecord(
-            String baseCurrency,
+            String base,
             String targetCurrency,
             double convertedAmount,
             double conversionResult,
             LocalDateTime timestamp
         ) {
-        this.baseCurrency = baseCurrency;
+        this.base = base;
         this.targetCurrency = targetCurrency;
         this.convertedAmount = convertedAmount;
         this.conversionResult = conversionResult;
@@ -25,12 +25,12 @@ public class ConversionRecord {
     }
 
     // Getters y Setters
-    public String getBaseCurrency() {
-        return baseCurrency;
+    public String getbase() {
+        return base;
     }
 
-    public void setBaseCurrency(String baseCurrency) {
-        this.baseCurrency = baseCurrency;
+    public void setbase(String base) {
+        this.base = base;
     }
 
     public String getTargetCurrency() {
@@ -70,7 +70,7 @@ public class ConversionRecord {
     public String toString() {
         return String.format(
             "%s -> %s | Cantidad: %.2f | Resultado: %.2f | Fecha: %s",
-            baseCurrency,
+            base,
             targetCurrency,
             convertedAmount,
             conversionResult,
