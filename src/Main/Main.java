@@ -13,6 +13,7 @@ public class Main {
             // Mostrar el menu principal
             System.out.println("### Menú Principal ###");
             System.out.println("1. Convertir moneda");
+            System.out.println("2. Mostrar historial de conversiones");
             System.out.println("0. Salir");
             System.out.print("Selecciona una opción: ");
 
@@ -21,8 +22,11 @@ public class Main {
             switch (option) {
                 case 1:
                     // Llamar a la clase que realiza la conversion
-                    ConversionService conversionService = new ConversionService();
-                    conversionService.performConversion(scanner);
+                    ConversionService.performConversion(scanner);
+                    break;
+                case 2:
+                    // Llamar a la clase que muestra el historial de conversiones
+                    ConversionService.showConversionHistory();
                     break;
                 case 0:
                     // Opcion para salir
