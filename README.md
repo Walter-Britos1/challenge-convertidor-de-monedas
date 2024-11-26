@@ -20,7 +20,7 @@ Para ejecutar este proyecto en tu máquina local, asegúrate de tener instalados
 
 1. **Clonar el repositorio:**
 
-   Abre tu terminal y ejecuta el siguiente comando para clonar el proyecto:
+   Abre tu terminal y ejecuta los siguientes comandos para clonar el proyecto:
 
    ```bash
    git clone https://github.com/Walter-Britos1/challenge-convertidor-de-monedas
