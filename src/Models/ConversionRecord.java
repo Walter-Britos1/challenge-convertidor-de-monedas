@@ -1,6 +1,7 @@
 package Models;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class ConversionRecord {
     private String base; // Moneda base
@@ -68,13 +69,18 @@ public class ConversionRecord {
     // Formatear el texto para mostrar la información de la conversion
     @Override
     public String toString() {
+        // Formatear la fecha
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+
+        String formatedDate = formatter.format(timestamp);
+
         return String.format(
             "%s -> %s | Cantidad: %.2f | Resultado: %.2f | Fecha: %s",
             base,
             targetCurrency,
             convertedAmount,
             conversionResult,
-            timestamp
+            formatedDate
         );
     }
 }
